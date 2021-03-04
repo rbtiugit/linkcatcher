@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Title of the Document</title>
+  </head>
+  <body>
+Dit tijdschrift is helaas alleen beschikbaar via <a href="">RDS</a>. Doe hiervoor het volgende:
+<ol>
+<li>Kopieer onderstaande URL
+<li>Ga naar <a href="https://go.uvt.nl/rds">de pagina over RDS</a>
+<li>Log in en kies Remote Desktop
+<li>Open Google Chrome
+<li>Plak de URL om het tijdschrift te openen
+</ol>
+<h2>
+    <script>
+	  const queryString = window.location.search;
+	  const urlParams = new URLSearchParams(queryString);
+//      const urlParams = new URLSearchParams("");
+      const size = urlParams.get('url');
+//      const size = urlParams.get('size');
+	  document.write('<a href="'+ size + '">' + size + '</a>');
+//      alert(size);
+      // s
+    </script>
+</h2>
+<input type="text" value="Hello World" id="myInput" >
+<button onclick="myFunction()">Copy text</button>
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+</body>
+</html>
